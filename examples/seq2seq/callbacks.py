@@ -88,6 +88,12 @@ def get_checkpoint_callback(output_dir, metric, save_top_k=1, lower_is_better=Fa
     """Saves the best model by validation ROUGE2 score."""
     if metric == "rouge2":
         exp = "{val_avg_rouge2:.4f}-{step_count}"
+    elif metric == "rouge1":
+        exp = "{val_avg_rouge1:.4f}-{step_count}"
+    elif metric == "rougeL":
+        exp = "{val_avg_rougeL:.4f}-{step_count}"
+    elif metric == "rougeLsum":
+        exp = "{val_avg_rougeLsum:.4f}-{step_count}"
     elif metric == "bleu":
         exp = "{val_avg_bleu:.4f}-{step_count}"
     elif metric == "loss":
