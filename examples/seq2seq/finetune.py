@@ -343,7 +343,7 @@ class SummarizationModule(BaseTransformer):
         parser.add_argument("--tgt_lang", type=str, default="", required=False)
         parser.add_argument("--eval_beams", type=int, default=None, required=False)
         parser.add_argument(
-            "--val_metric", type=str, default=None, required=False, choices=["bleu", "rouge2", "loss", None]
+            "--val_metric", type=str, default=None, required=False, choices=["bleu", "rouge1", "rouge2", "rougeL", "rougeLsum", "loss", None]
         )
         parser.add_argument("--eval_max_gen_length", type=int, default=None, help="never generate more than n tokens")
         parser.add_argument("--save_top_k", type=int, default=1, required=False, help="How many checkpoints to save")
